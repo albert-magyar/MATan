@@ -24,18 +24,18 @@ classdef CatanGame < handle
         function obj = CatanGame
             % calls showSplashScreen
             obj.RollPics = cell(2,6);
-            obj.RollPics{1,1} = imread('1_y_die.jpg');
-            obj.RollPics{1,2} = imread('2_y_die.jpg');
-            obj.RollPics{1,3} = imread('3_y_die.jpg');
-            obj.RollPics{1,4} = imread('4_y_die.jpg');
-            obj.RollPics{1,5} = imread('5_y_die.jpg');
-            obj.RollPics{1,6} = imread('6_y_die.jpg');
-            obj.RollPics{2,1} = imread('1_r_die.jpg');
-            obj.RollPics{2,2} = imread('2_r_die.jpg');
-            obj.RollPics{2,3} = imread('3_r_die.jpg');
-            obj.RollPics{2,4} = imread('4_r_die.jpg');
-            obj.RollPics{2,5} = imread('5_r_die.jpg');
-            obj.RollPics{2,6} = imread('6_r_die.jpg');
+            obj.RollPics{1,1} = imread('media/1_y_die.jpg');
+            obj.RollPics{1,2} = imread('media/2_y_die.jpg');
+            obj.RollPics{1,3} = imread('media/3_y_die.jpg');
+            obj.RollPics{1,4} = imread('media/4_y_die.jpg');
+            obj.RollPics{1,5} = imread('media/5_y_die.jpg');
+            obj.RollPics{1,6} = imread('media/6_y_die.jpg');
+            obj.RollPics{2,1} = imread('media/1_r_die.jpg');
+            obj.RollPics{2,2} = imread('media/2_r_die.jpg');
+            obj.RollPics{2,3} = imread('media/3_r_die.jpg');
+            obj.RollPics{2,4} = imread('media/4_r_die.jpg');
+            obj.RollPics{2,5} = imread('media/5_r_die.jpg');
+            obj.RollPics{2,6} = imread('media/6_r_die.jpg');
             showSplashScreen(obj)
         end
                
@@ -44,7 +44,7 @@ classdef CatanGame < handle
             ha = axes('Parent',screen,'units','normalized', ...
                 'position',[0 0 1 1]);
             uistack(ha,'bottom');
-            I=imread('BoxCover.jpg');
+            I=imread('media/BoxCover.jpg');
             hi = imagesc(I);
             colormap gray
             set(ha,'handlevisibility','off','visible','off')   

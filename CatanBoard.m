@@ -37,7 +37,7 @@ classdef CatanBoard < handle
             obj.Fig = figure('MenuBar','none','Position',[110 75 1000 600]);
             obj.PanelAxes = axes('Parent',obj.Fig,'units','normalized', ...
                 'position',[0 0 1 1]);
-            I=imread('goldtexture.jpg');
+            I=imread('media/goldtexture.jpg');
             hi = imagesc(I);
             
             obj.BoardAxes = axes('Parent',obj.Fig,'units','normalized',...
@@ -53,8 +53,8 @@ classdef CatanBoard < handle
             
             obj.YDiceAxes = axes('Parent',obj.Fig,'Position',[.03 .75 .06 .10]);
             obj.RDiceAxes = axes('Parent',obj.Fig,'Position',[.11 .75 .06 .10]);
-            blankr=imread('blank_r_die.jpg');
-            blanky=imread('blank_y_die.jpg');
+            blankr=imread('media/blank_r_die.jpg');
+            blanky=imread('media/blank_y_die.jpg');
             YDice = imagesc(blanky,'Parent',obj.YDiceAxes);
             set(obj.YDiceAxes,'Visible','off');
             RDice = imagesc(blankr,'Parent',obj.RDiceAxes);
@@ -179,7 +179,7 @@ classdef CatanBoard < handle
             cardarray = obj.Game.Players{n}.Hand{1}
             cardnum = sum(cardarray,2)
             
-            cardimage = imread('card.jpg');
+            cardimage = imread('media/card.jpg');
           
             for j = 1:cardnum
               height = .0760
